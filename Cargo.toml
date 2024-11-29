@@ -1,0 +1,10 @@
+[workspace]
+members = ["nipa-macros"]
+
+[package]
+name = "hello-nipa"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+nipa-macros = { path = "./nipa-macros" }
