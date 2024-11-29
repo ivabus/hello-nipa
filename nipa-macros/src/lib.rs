@@ -8,92 +8,99 @@ pub fn letter(input: TokenStream) -> TokenStream {
     let ident = input_parsed;
     TokenStream::from(quote! {
         struct #ident;
+
         impl #ident {
-            pub fn print_upper() {
+            fn new() -> Self {
+                 Self
+             }
+        }
+
+        impl nipa_traits::Letter for #ident {
+            fn print_upper(&self) {
                 print!("{}", stringify!(#ident).to_uppercase());
             }
 
-            pub fn print_lower() {
+            fn print_lower(&self) {
                 print!("{}", stringify!(#ident).to_lowercase());
             }
 
-            pub fn print_upper_space() {
+            fn print_upper_space(&self) {
                 print!("{} ", stringify!(#ident).to_uppercase());
             }
 
-            pub fn print_lower_space() {
+            fn print_lower_space(&self) {
                 print!("{} ", stringify!(#ident).to_lowercase());
             }
 
-            pub fn println_upper() {
+            fn println_upper(&self) {
                 println!("{}", stringify!(#ident).to_uppercase());
             }
 
-            pub fn println_lower() {
+            fn println_lower(&self) {
                 println!("{}", stringify!(#ident).to_lowercase());
             }
 
-            pub fn print_upper_dot() {
+            fn print_upper_dot(&self) {
                 print!("{}.", stringify!(#ident).to_uppercase());
             }
 
-            pub fn print_lower_dot() {
+            fn print_lower_dot(&self) {
                 print!("{}.", stringify!(#ident).to_lowercase());
             }
 
-            pub fn print_upper_space_dot() {
+            fn print_upper_space_dot(&self) {
                 print!("{}. ", stringify!(#ident).to_uppercase());
             }
 
-            pub fn print_lower_space_dot() {
+            fn print_lower_space_dot(&self) {
                 print!("{}. ", stringify!(#ident).to_lowercase());
             }
 
-            pub fn print_upper_space_dot_after() {
+            fn print_upper_space_dot_after(&self) {
                 print!("{} .", stringify!(#ident).to_uppercase());
             }
 
-            pub fn print_lower_space_dot_after() {
+            fn print_lower_space_dot_after(&self) {
                 print!("{} .", stringify!(#ident).to_lowercase());
             }
 
-            pub fn println_upper_dot() {
+            fn println_upper_dot(&self) {
                 println!("{}.", stringify!(#ident).to_uppercase());
             }
 
-            pub fn println_lower_dot() {
+            fn println_lower_dot(&self) {
                 println!("{}.", stringify!(#ident).to_lowercase());
             }
 
-            pub fn print_upper_comma() {
+            fn print_upper_comma(&self) {
                 print!("{},", stringify!(#ident).to_uppercase());
             }
 
-            pub fn print_lower_comma() {
+            fn print_lower_comma(&self) {
                 print!("{},", stringify!(#ident).to_lowercase());
             }
 
-            pub fn print_upper_space_comma() {
+            fn print_upper_space_comma(&self) {
                 print!("{}, ", stringify!(#ident).to_uppercase());
             }
 
-            pub fn print_lower_space_comma() {
+            fn print_lower_space_comma(&self) {
                 print!("{}, ", stringify!(#ident).to_lowercase());
             }
 
-            pub fn print_upper_space_comma_after() {
+            fn print_upper_space_comma_after(&self) {
                 print!("{} ,", stringify!(#ident).to_uppercase());
             }
 
-            pub fn print_lower_space_comma_after() {
+            fn print_lower_space_comma_after(&self) {
                 print!("{} ,", stringify!(#ident).to_lowercase());
             }
 
-            pub fn println_upper_comma() {
+            fn println_upper_comma(&self) {
                 println!("{},", stringify!(#ident).to_uppercase());
             }
 
-            pub fn println_lower_comma() {
+            fn println_lower_comma(&self) {
                 println!("{},", stringify!(#ident).to_lowercase());
             }
         }

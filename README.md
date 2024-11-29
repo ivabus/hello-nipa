@@ -14,6 +14,8 @@ cargo run
 
 `nipa-macros` crate contains `letter!` macro to generate basic printing methods.
 
+`nipa-traits` crate contains useful `Letter` trait.
+
 `hello-nipa` executable crate just utilises `letter!` macro from `nipa-macros` crate.
 
 ## License

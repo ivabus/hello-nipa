@@ -1,5 +1,5 @@
 [workspace]
-members = ["nipa-macros"]
+members = ["nipa-macros", "nipa-traits"]
 
 [package]
 name = "hello-nipa"
@@ -8,3 +8,4 @@ edition = "2021"
 
 [dependencies]
 nipa-macros = { path = "./nipa-macros" }
+nipa-traits = { path = "./nipa-traits" }
